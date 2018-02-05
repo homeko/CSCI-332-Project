@@ -1,4 +1,5 @@
 <?php
+require 'dbconnect.php';
 
 $sql = "SELECT * FROM Actors";
 

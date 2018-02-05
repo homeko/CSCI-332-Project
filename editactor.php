@@ -16,6 +16,8 @@ if (!$result = $mysqli->query($sql)) {
 }
 
 ?>
+
+<!-- java script here -->
 <script>
 window.location = 'actorlisting.php';
 </script>
