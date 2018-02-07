@@ -29,4 +29,4 @@ while ($s = $result->fetch_assoc()) {
 echo "</table>";
 ?>
 
-<a href='addactor.php'>Add New Actor</a>
+<a href='addactorclt.htm'>Add New Actor</a>
