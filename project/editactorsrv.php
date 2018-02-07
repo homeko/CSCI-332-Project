@@ -3,7 +3,7 @@ require 'dbconnect.php';
 
 $fname = $_REQUEST['fname'];
 $lname = $_REQUEST['lname'];
-$byear = $_REQUEST['byear'];
+$byear = $_REQUEST['bYear'];
 $id = $_REQUEST['id'];
 $sql = "UPDATE Actors SET firstName='$fname', lastName='$lname', birthYear='$byear' WHERE ActorID=$id";
 
