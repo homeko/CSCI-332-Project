@@ -12,7 +12,7 @@ if (!$result = $mysqli->query($sql)) {
 }
 
 echo "<table border=1>";
-echo "<tr><th>Title</th><th>Release Year</th><th>Rating</th><th>Length (minutes)</th></tr>";
+echo "<tr><th>Title</th><th>Release Year</th><th>Genre</th><th>Rating</th><th>Length (minutes)</th></tr>";
 
 while ($s = $result->fetch_assoc()) {
   echo "<tr>";
