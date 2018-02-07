@@ -1,7 +1,7 @@
 <?php
 require 'dbconnect.php';
 
-$sql = "SELECT * FROM Actors";
+$sql = "SELECT * FROM Actors ORDER BY lastName";
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";

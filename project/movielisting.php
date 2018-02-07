@@ -1,7 +1,7 @@
 <?php
 require 'dbconnect.php';
 
-$sql = "SELECT * FROM Movies";
+$sql = "SELECT * FROM Movies ORDER BY Title";
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";
@@ -18,6 +18,7 @@ while ($s = $result->fetch_assoc()) {
   echo "<tr>";
   echo "<td>" . $s["Title"] . "</td>";
   echo "<td>" . $s["ReleaseYear"] . "</td>";
+  echo "<td>" . $s["Genre"] . "</td>";
   echo "<td>" . $s["Rating"] . "</td>";
   echo "<td>" . $s["MovieLength"] . "</td>";
   echo "<td>";
