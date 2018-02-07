@@ -19,10 +19,12 @@ $id = $row['id'];
 ?>
 
 <!-- form to edit actors here -->
-<form action="editactor.php">
+<form action="editactorsrv.php">
+
   <input type="hidden" name="id" value="<?php echo $id?>" />
   First Name:<input name="fname" value="<?php echo $fname?>" /></br>
   Last Name:<input name="lname"value="<?php echo $lname?>" /></br>
   Email: <input name="bYear" value="<?php echo $byear?>" /></br>
   <input type="submit" value="Save"/>
+
 </form>
