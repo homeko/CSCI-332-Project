@@ -3,6 +3,9 @@ require 'dbconnect.php';
 
 $sql = "SELECT * FROM Actors WHERE id = " . $_REQUEST['id'];
 
+// debugging
+echo $sql
+
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";
     echo "Query: " . $sql . "</br>";
