@@ -1,10 +1,7 @@
 <?php
 require 'dbconnect.php';
 
-$sql = "SELECT * FROM Actors WHERE id = " . $_REQUEST['id'];
-
-// debugging
-echo $sql
+$sql = "SELECT * FROM Actors WHERE ActorID = " . $_REQUEST['id'];
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";
@@ -16,8 +13,8 @@ if (!$result = $mysqli->query($sql)) {
 $row = $result->fetch_assoc();
 $fname = $row['firstName'];
 $lname = $row['lastName'];
-$email = $row['birthYear'];
-$id = $row['id'];
+$byear = $row['birthYear'];
+$id = $row['ActorID'];
 
 ?>
 
@@ -27,7 +24,7 @@ $id = $row['id'];
   <input type="hidden" name="id" value="<?php echo $id?>" />
   First Name:<input name="fname" value="<?php echo $fname?>" /></br>
   Last Name:<input name="lname"value="<?php echo $lname?>" /></br>
-  Email: <input name="bYear" value="<?php echo $byear?>" /></br>
+  Birth Year: <input name="bYear" value="<?php echo $byear?>" /></br>
   <input type="submit" value="Save"/>
 
 </form>

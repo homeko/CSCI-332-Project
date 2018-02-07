@@ -20,8 +20,8 @@ while ($s = $result->fetch_assoc()) {
   echo "<td>" . $s["lastName"] . "</td>";
   echo "<td>" . $s["birthYear"] . "</td>";
   echo "<td>";
-  echo "<a href='delactor.php?id=" . $s["id"] . "'>DEL</a> ";
-  echo "<a href='editactor.php?id=" . $s["id"] . "'>EDT</a>";
+  echo "<a href='delactorsrv.php?id=" . $s["ActorID"] . "'>DEL</a> ";
+  echo "<a href='editactorclt.php?id=" . $s["ActorID"] . "'>EDT</a>";
   echo "</td>";
   echo "</tr>";
 
