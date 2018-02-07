@@ -13,5 +13,5 @@ if (!$result = $mysqli->query($sql)) {
 
 ?>
 <script>
-window.location = 'liststudents.php';
+window.location = 'actorlisting.php';
 </script>

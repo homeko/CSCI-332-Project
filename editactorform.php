@@ -1,7 +1,7 @@
 <?php
 require 'dbconnect.php';
 
-$sql = "SELECT * from Actors where id = " . $_REQUEST['id'];
+$sql = "SELECT * FROM Actors WHERE id = " . $_REQUEST['id'];
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";
