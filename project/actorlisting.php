@@ -24,8 +24,8 @@ while ($s = $result->fetch_assoc()) {
   echo "<a href='editactorclt.php?id=" . $s["ActorID"] . "'>EDT</a>";
   echo "</td>";
   echo "</tr>";
-
 }
+
 echo "</table>";
 ?>
 
