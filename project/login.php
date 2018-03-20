@@ -5,11 +5,11 @@
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and pass sent to form
 
-    $myusername = mysqli_real_escape_string($db,$_POST['username']);
-    $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+    $myusername = mysqli_real_escape_string($mysqli,$_POST['username']);
+    $mypassword = mysqli_real_escape_string($mysqli,$_POST['password']);
 
     $sql = "SELECT id FROM Admin WHERE username = '$myusername' AND password = '$mypassword'";
-    $result = mysqli_query($db,$sql);
+    $result = mysqli_query($mysqli,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $active = $row['active'];
 
@@ -18,8 +18,7 @@
     // if user/pass matches, then table row must be 1 row
 
     if($count == 1) {
-      session_register("myusername");
-      $_SESSION['login_user'] = $myuser;
+      $_SESSION['login_user'] = $myusername;
 
       header("location: welcome.php");
     }
