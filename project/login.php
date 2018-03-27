@@ -30,7 +30,7 @@
 
 <html>
    <head>
-      <title>Login Page</title>
+      <title>Admin login</title>
 
       <style type = "text/css">
          body {
