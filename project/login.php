@@ -61,5 +61,6 @@
             </div>
          </div>
       </div>
+      <a href="default.htm">Home page</a>
    </body>
 </html>
