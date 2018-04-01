@@ -1,20 +1,20 @@
 <?php
-require 'dbconnect.php';
+  require 'dbconnect.php';
 
-$sql = "SELECT * FROM Actors WHERE ActorID = " . $_REQUEST['id'];
+  $sql = "SELECT * FROM Actors WHERE ActorID = " . $_REQUEST['id'];
 
-if (!$result = $mysqli->query($sql)) {
-    echo "Error: Our query failed to execute and here is why: </br>";
-    echo "Query: " . $sql . "</br>";
-    echo "Errno: " . $mysqli->errno . "</br>";
-    echo "Error: " . $mysqli->error . "</br>";
-    exit;
-}
-$row = $result->fetch_assoc();
-$fname = $row['firstName'];
-$lname = $row['lastName'];
-$byear = $row['birthYear'];
-$id = $row['ActorID'];
+  if (!$result = $mysqli->query($sql)) {
+      echo "Error: Our query failed to execute and here is why: </br>";
+      echo "Query: " . $sql . "</br>";
+      echo "Errno: " . $mysqli->errno . "</br>";
+      echo "Error: " . $mysqli->error . "</br>";
+      exit;
+  }
+  $row = $result->fetch_assoc();
+  $fname = $row['firstName'];
+  $lname = $row['lastName'];
+  $byear = $row['birthYear'];
+  $id = $row['ActorID'];
 
 ?>
 

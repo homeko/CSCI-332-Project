@@ -1,10 +1,8 @@
 <?php
   require 'dbconnect.php';
 
-  // create view - sort by ratings desc
-  // w/ awards column?
-
   $sql = "SELECT * FROM Top_ratings";
+  // top_ratings is a view table
 
   if (!$result = $mysqli->query($sql)) {
       echo "Error: Our query failed to execute and here is why: </br>";
@@ -27,8 +25,7 @@
     echo "</td>";
     echo "</tr>";
   }
-
+  
   echo "</table>";
 
-
- ?>
+?>
