@@ -4,12 +4,8 @@
   // using addmovieclt, to add movies to table
   $title = $_REQUEST['title'];
   $year = $_REQUEST['year'];
-  $genre = $_REQUEST['genre'];
-  $rating = $_REQUEST['rating'];
   $length = $_REQUEST['length'];
-  $sql = "INSERT INTO Movies (Title,ReleaseYear,Genre,Rating,MovieLength) VALUES ('$title','$year','$genre','$rating','$length')";
-  // second query
-  $sqlTwo = "INSERT INTO Genres (GenreName) VALUES ('$genre')";
+  $sql = "INSERT INTO Movies (Title,ReleaseYear,MovieLength) VALUES ('$title','$year','$length')";
 
   if (!$result = $mysqli->query($sql)) {
       echo "Error: Our query failed to execute and here is why: </br>";

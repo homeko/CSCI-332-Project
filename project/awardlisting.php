@@ -1,8 +1,8 @@
 <?php
   require 'dbconnect.php';
 
-  // using countAwards function, returns # of awards the actor has won
-  $sql = "SELECT *, countAwards() as AwardsWon FROM Actors ORDER BY lastName";
+  $sql = "SELECT * FROM Awards ORDER BY awardName";
+  // Oscar awards
 
   if (!$result = $mysqli->query($sql)) {
       echo "Error: Our query failed to execute and here is why: </br>";
@@ -17,12 +17,13 @@
 
   while ($s = $result->fetch_assoc()) {
     echo "<tr>";
+    echo "<td>" . $s["awardName"] . "</td>";
     echo "<td>" . $s["firstName"] . "</td>";
     echo "<td>" . $s["lastName"] . "</td>";
-    echo "<td>" . $s["birthYear"] . "</td>";
+    echo "<td>" . $s["yearWon"] . "</td>";
     echo "<td>";
-    echo "<a href='delactorsrv.php?id=" . $s["ActorID"] . "'>DEL</a> ";
-    echo "<a href='editactorclt.php?id=" . $s["ActorID"] . "'>EDT</a>";
+    echo "<a href='delawardsrv.php?id=" . $s["AwardID"] . "'>DEL</a> ";
+    echo "<a href='editawardclt.php?id=" . $s["AwardID"] . "'>EDT</a>";
     echo "</td>";
     echo "</tr>";
   }
@@ -30,4 +31,4 @@
   echo "</table>";
 ?>
 
-<a href='addactorclt.htm'>Add New Actor</a>
+<a href='addawardclt.htm'>Add New Award</a>

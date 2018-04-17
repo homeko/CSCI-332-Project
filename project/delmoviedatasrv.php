@@ -1,11 +1,7 @@
 <?php
 require 'dbconnect.php';
 
-$fname = $_REQUEST['fname'];
-$lname = $_REQUEST['lname'];
-$byear = $_REQUEST['byear'];
-
-$sql = "INSERT INTO Actors (firstName,lastName,birthYear) VALUES ('$fname','$lname','$byear')";
+$sql = "DELETE FROM MovieData WHERE MovieDataID = " . $_REQUEST['id'];
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";
@@ -16,7 +12,6 @@ if (!$result = $mysqli->query($sql)) {
 }
 ?>
 
-<!-- java script here -->
 <script>
-window.location = 'actorlisting.php';
+window.location = 'moviedatalisting.php';
 </script>

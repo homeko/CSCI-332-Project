@@ -14,8 +14,6 @@ if (!$result = $mysqli->query($sql)) {
 $row = $result->fetch_assoc();
 $title = $row['title'];
 $year = $row['year'];
-$genre = $row['genre'];
-$rating = $row['rating'];
 $length = $row['length'];
 $id = $row['MovieID'];
 
@@ -26,8 +24,6 @@ $id = $row['MovieID'];
   <input type="hidden" name="id" value="<?php echo $id?>" />
   Movie title:<input name="title" value="<?php echo $title?>" /></br>
   Release year:<input name="year"value="<?php echo $year?>" /></br>
-  Genre: <input name="genre" value="<?php echo $genre?>" /></br>
-  RT Rating: <input name="rating" value="<?php echo $rating?>" /></br>
   Movie length: <input name="length" value="<?php echo $length?>" /></br>
   <input type="submit" value="Save"/>
 </form>

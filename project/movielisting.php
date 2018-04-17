@@ -12,14 +12,12 @@ if (!$result = $mysqli->query($sql)) {
 }
 
 echo "<table border=1>";
-echo "<tr><th>Title</th><th>Release Year</th><th>Genre</th><th>Rating</th><th>Length (minutes)</th></tr>";
+echo "<tr><th>Title</th><th>Release Year</th><th>Length (minutes)</th></tr>";
 
 while ($s = $result->fetch_assoc()) {
   echo "<tr>";
   echo "<td>" . $s["Title"] . "</td>";
   echo "<td>" . $s["ReleaseYear"] . "</td>";
-  echo "<td>" . $s["Genre"] . "</td>";
-  echo "<td>" . $s["Rating"] . "</td>";
   echo "<td>" . $s["MovieLength"] . "</td>";
   echo "<td>";
   echo "<a href='delmoviesrv.php?id=" . $s["MovieID"] . "'>DEL</a> ";

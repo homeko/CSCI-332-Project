@@ -1,11 +1,12 @@
 <?php
 require 'dbconnect.php';
 
+$aname = $_REQUEST['aname'];
 $fname = $_REQUEST['fname'];
 $lname = $_REQUEST['lname'];
-$byear = $_REQUEST['byear'];
-
-$sql = "INSERT INTO Actors (firstName,lastName,birthYear) VALUES ('$fname','$lname','$byear')";
+$movie = $_REQUEST['movie'];
+$yearw = $_REQUEST['yearw'];
+$sql = "INSERT INTO Awards (awardName,firstName,lastName,movie,yearWon) VALUES ('aname','$fname','$lname','$movie','$yearw')";
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";
@@ -18,5 +19,5 @@ if (!$result = $mysqli->query($sql)) {
 
 <!-- java script here -->
 <script>
-window.location = 'actorlisting.php';
+window.location = 'awardlisting.php';
 </script>
