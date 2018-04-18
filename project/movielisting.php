@@ -29,4 +29,5 @@ while ($s = $result->fetch_assoc()) {
 echo "</table>";
 ?>
 
-<a href='addmovieclt.htm'>Add New Movie</a>
+<a href='addmovieclt.htm'>Add New Movie</a><br />
+<a href='welcome.php'>Back home</a>

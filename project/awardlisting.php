@@ -13,7 +13,7 @@
   }
 
   echo "<table border=1>";
-  echo "<tr><th>First Name</th><th>Last Name</th><th>Birth Year</th></tr>";
+  echo "<tr><th>Award Name</th><th>First Name</th><th>Last Name</th><th>Birth Year</th></tr>";
 
   while ($s = $result->fetch_assoc()) {
     echo "<tr>";
@@ -31,4 +31,7 @@
   echo "</table>";
 ?>
 
-<a href='addawardclt.htm'>Add New Award</a>
+<br />
+<br />
+<a href='addawardclt.htm'>Add New Award</a><br />
+<a href='welcome.php'>Back home</a>

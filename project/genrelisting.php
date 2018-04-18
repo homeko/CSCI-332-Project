@@ -27,5 +27,7 @@
   echo "</table>";
 ?>
 
+<br />
+<br />
 <a href='addgenreclt.htm'>Add new genre</a><br />
 <a href='welcome.php'>Back home</a>

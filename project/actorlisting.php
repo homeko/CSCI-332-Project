@@ -30,6 +30,7 @@
 
   echo "</table>";
 ?>
-
+<br />
+<br />
 <a href='addactorclt.htm'>Add New Actor</a><br />
 <a href='welcome.php'>Back home</a>

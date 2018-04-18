@@ -31,6 +31,7 @@
 
   echo "</table>";
 ?>
-
-<a href='addactorclt.htm'>Add New Actor</a><br />
+<br />
+<br />
+<a href='addmoviedataclt.htm'>Add new movie data</a><br />
 <a href='welcome.php'>Back home</a>

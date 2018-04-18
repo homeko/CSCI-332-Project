@@ -22,10 +22,24 @@
 <form action="editmoviedatasrv.php">
 
   <input type="hidden" name="id" value="<?php echo $id?>" />
-  Title: <input name="title" value="<?php echo $title?>" /></br>
-  Genre: <input name="genre"value="<?php echo $genre?>" /></br>
-  Rating: <input name="rating" value="<?php echo $rating?>" /></br>
-  Awards: <input name="awards" value="<?php echo $awards?>" /></br>
+    Title: <input name="title" /></br>
+    <!-- Genre: <input name="genre" required/></br> -->
+    Genre:
+      <select id="genre" name="genre">
+        <option value="0">--Select Genre--</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Animated">Animated</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Horror">Horror</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Romance">Romance</option>
+        <option value="Documentary">Documentary</option>
+      </select><br />
+    RT Rating: <input name="rating" placeholder="Integers only" required /></br>
+    Awards: <input name="awards" placeholder="Integers only" required /><br />
   <input type="submit" value="Save"/>
 
 </form>
