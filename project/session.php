@@ -4,6 +4,7 @@
 
    $user_check = $_SESSION['login_user'];
 
+   // checking admin login table
    $ses_sql = mysqli_query($mysqli,"SELECT username FROM admin WHERE username = '$user_check' ");
 
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);

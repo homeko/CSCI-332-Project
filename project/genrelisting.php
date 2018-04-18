@@ -12,16 +12,14 @@
   }
 
   echo "<table border=1>";
-  echo "<tr><th>First Name</th><th>Last Name</th><th>Birth Year</th></tr>";
+  echo "<tr><th>Genre</th></tr>";
 
   while ($s = $result->fetch_assoc()) {
     echo "<tr>";
     echo "<td>" . $s["firstName"] . "</td>";
-    echo "<td>" . $s["lastName"] . "</td>";
-    echo "<td>" . $s["birthYear"] . "</td>";
     echo "<td>";
-    echo "<a href='delactorsrv.php?id=" . $s["ActorID"] . "'>DEL</a> ";
-    echo "<a href='editactorclt.php?id=" . $s["ActorID"] . "'>EDT</a>";
+    echo "<a href='delgenresrv.php?id=" . $s["ActorID"] . "'>DEL</a> ";
+    echo "<a href='editgenreclt.php?id=" . $s["ActorID"] . "'>EDT</a>";
     echo "</td>";
     echo "</tr>";
   }
@@ -29,4 +27,5 @@
   echo "</table>";
 ?>
 
-<a href='addactorclt.htm'>Add new genre</a>
+<a href='addgenreclt.htm'>Add new genre</a><br />
+<a href='welcome.php'>Back home</a>
