@@ -2,7 +2,8 @@
   require 'dbconnect.php';
 
   // using countAwards function, returns # of awards the actor has won
-  $sql = "SELECT *, countAwards() as AwardsWon FROM Actors ORDER BY lastName";
+  // $sql = "SELECT *, countAwards() as AwardsWon FROM Actors ORDER BY lastName";
+  $sql = "SELECT * FROM Actors ORDER BY lastName";
 
   if (!$result = $mysqli->query($sql)) {
       echo "Error: Our query failed to execute and here is why: </br>";
