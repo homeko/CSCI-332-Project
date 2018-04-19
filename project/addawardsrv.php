@@ -6,7 +6,7 @@ $fname = $_REQUEST['fname'];
 $lname = $_REQUEST['lname'];
 $movie = $_REQUEST['movie'];
 $yearw = $_REQUEST['yearw'];
-$sql = "INSERT INTO Awards (awardName,firstName,lastName,movie,yearWon) VALUES ('$aname','$fname','$lname','$movie','$yearw')";
+$sql = "INSERT INTO Awards (awardName,firstName,lastName,Movie,yearWon) VALUES ('$aname','$fname','$lname','$movie','$yearw')";
 
 if (!$result = $mysqli->query($sql)) {
     echo "Error: Our query failed to execute and here is why: </br>";

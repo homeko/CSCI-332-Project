@@ -15,7 +15,7 @@
       <a href="/project/directorlisting.php">Directors</a><br>
       <a href="/project/genrelisting.php">Genres</a><br>
       <a href="/project/moviedatalisting.php">Additional Movie Data</a><br />
-      <a href="/project/awards.php">Awards</a><br /><br />
+      <a href="/project/awardlisting.php">Awards</a><br /><br />
       <a href="/project/viewratings.php">View top rated movies</a><br>
    </body>
 </html>

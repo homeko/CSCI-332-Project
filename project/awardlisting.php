@@ -13,13 +13,14 @@
   }
 
   echo "<table border=1>";
-  echo "<tr><th>Award Name</th><th>First Name</th><th>Last Name</th><th>Birth Year</th></tr>";
+  echo "<tr><th>Award Name</th><th>First Name</th><th>Last Name</th><th>Movie</th><th>Year Won</th></tr>";
 
   while ($s = $result->fetch_assoc()) {
     echo "<tr>";
     echo "<td>" . $s["awardName"] . "</td>";
     echo "<td>" . $s["firstName"] . "</td>";
     echo "<td>" . $s["lastName"] . "</td>";
+    echo "<td>" . $s["Movie"] . "</td>";
     echo "<td>" . $s["yearWon"] . "</td>";
     echo "<td>";
     echo "<a href='delawardsrv.php?id=" . $s["AwardID"] . "'>DEL</a> ";
